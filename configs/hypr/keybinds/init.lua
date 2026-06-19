@@ -21,6 +21,7 @@ local terminal = "kitty"
 local browser = "firefox"
 local launcher = "rofi -show drun"
 local vscode = "code" 
+-- Added the discord keybind to launch discord with wayland decorations enabled and ozone platform hint set to auto. This is useful for users who want to run discord on wayland without any issues.
 local discord = "discord --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto"
 
 hl.bind(mod .. " + R", hl.dsp.exec_cmd(launcher))
@@ -31,3 +32,18 @@ hl.bind(mod .. " + D", hl.dsp.exec_cmd(discord))
 
 -- Hyprland Reload
 hl.bind(mod .. " + " .. shift .. " + R", hl.dsp.exec_cmd("hyprctl reload"))
+
+-- Media keys (volume control)
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("pactl set-sink-volume @DEFAULT_SINK@ +5%"))
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("pactl set-sink-volume @DEFAULT_SINK@ -5%"))
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd("pactl set-sink-mute @DEFAULT_SINK@ toggle"))
+
+-- Microphone mute
+hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("pactl set-source-mute @DEFAULT_SOURCE@ toggle"))
+
+-- Screen Brightness (using brightnessctl)
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl set +10%"))
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 10%-"))
+
+-- Screenshot (using grim and slurp)
+hl.bind("Print", hl.dsp.exec_cmd("grim -g \"$(slurp)\" ~/Pictures/Screenshots/screenshot_$(date +%F_%H-%M-%S).png"))

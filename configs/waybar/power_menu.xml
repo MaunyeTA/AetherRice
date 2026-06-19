@@ -1,28 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <object class="GtkMenu" id="menu">
+    <object class="GtkMenu" id="menu">
     <child>
-		<object class="GtkMenuItem" id="suspend">
-			<property name="label">Suspend</property>
-        </object>
-	</child>
-	<child>
-        <object class="GtkMenuItem" id="hibernate">
-			<property name="label">Hibernate</property>
-        </object>
-	</child>
+      <object class="GtkImageMenuItem" id="suspend">
+        <property name="label">Suspend</property>
+        <child>
+          <object class="GtkImage" id="suspend_img">
+            <property name="icon-name">system-suspend</property>
+            <property name="icon-size">16</property>
+          </object>
+        </child>
+      </object>
+    </child>
     <child>
-        <object class="GtkMenuItem" id="shutdown">
-			<property name="label">Shutdown</property>
-        </object>
+      <object class="GtkImageMenuItem" id="hibernate">
+        <property name="label">Hibernate</property>
+        <child>
+          <object class="GtkImage" id="hibernate_img">
+            <property name="icon-name">system-hibernate</property>
+            <property name="icon-size">16</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="shutdown">
+        <property name="label">Shutdown</property>
+        <child>
+          <object class="GtkImage" id="shutdown_img">
+            <property name="icon-name">system-shutdown</property>
+            <property name="icon-size">16</property>
+          </object>
+        </child>
+      </object>
     </child>
     <child>
       <object class="GtkSeparatorMenuItem" id="delimiter1"/>
     </child>
     <child>
-		<object class="GtkMenuItem" id="reboot">
-			<property name="label">Reboot</property>
-		</object>
+      <object class="GtkImageMenuItem" id="reboot">
+        <property name="label">Reboot</property>
+        <child>
+          <object class="GtkImage" id="reboot_img">
+            <property name="icon-name">system-reboot</property>
+            <property name="icon-size">16</property>
+          </object>
+        </child>
+      </object>
     </child>
-  </object>
+    </object>
 </interface>

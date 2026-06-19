@@ -2,33 +2,33 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
+    "height": 32,
     "margin-top": 4,
     "margin-left": 0,
     "margin-right": 0,
-    "spacing": 4,
+    "spacing": 6,
     "modules-left": [
         "custom/launcher",
         "custom/separator",
         "hyprland/window"
     ],
     "modules-center": [
-        "hyprland/workspaces",
-        "hyprland/submap"
+        "hyprland/workspaces"
     ],
-    "modules-right": [
+    "modules-right": [ 
         "pulseaudio",
         "network",
         "battery",
         "clock",
         "custom/power"
     ],
+
     "custom/launcher": {
         "format": "",
         "on-click": "rofi -show drun",
         "tooltip": false
     },
-        "custom/separator": {
+    "custom/separator": {
         "format": "|",
         "interval": "once",
         "tooltip": false
@@ -41,35 +41,33 @@
         "sort-by-number": true,
         "tooltip": false
     },
+
     "clock": {
         "timezone": "Africa/Johannesburg",
         "format": "{:%H:%M}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%Y-%m-%d}",
+        "tooltip-format": "{:%A, %B %d, %Y}"
     },
     "battery": {
         "states": {
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}",
-        "format-full": "{icon}",
-        "format-charging": "󰃨",
-        "format-plugged": "",
-        "format-alt": "{time} {icon}",
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰃨 {capacity}%",
+        "format-plugged": " {capacity}%",
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
         "format-wifi": "",
         "format-ethernet": "{ipaddr}/{cidr} 󰊗",
-        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format": "{essid}",
         "format-linked": "{ifname} (No IP) 󰊗",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{essid} "
+        "format-disconnected": "Disconnected ⚠"
     },
     "pulseaudio": {
         "scroll-step": 2,
-        "format": "{icon}",
+        "format": "{icon} {volume}%",
         "format-bluetooth": "{icon}",
         "format-bluetooth-muted": "󰅶 {icon}",
         "format-muted": "󰅶",
@@ -87,15 +85,15 @@
         "on-click": "pavucontrol"
     },
     "custom/power": {
-        "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml",
-		"menu-actions": {
-			"shutdown": "shutdown -h now",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
+        "format": "⏻",
+        "tooltip": false,
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/waybar/power_menu.xml",
+        "menu-actions": {
+            "shutdown": "shutdown -h now",
+            "reboot": "reboot",
+            "suspend": "systemctl suspend",
+            "hibernate": "systemctl hibernate"
+        }
     }
 }
