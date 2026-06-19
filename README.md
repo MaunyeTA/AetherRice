@@ -57,6 +57,9 @@ git
 base-devel
 grim
 slurp
+starship
+fish
+fastfetch
 ...
 ```
 

@@ -34,7 +34,9 @@ cp -r configs/hypr ~/.config/
 cp -r configs/waybar ~/.config/
 cp -r configs/rofi ~/.config/
 cp -r configs/kitty ~/.config/
-cp -r assets ~/.config/
+cp -r configs/fastfetch ~/.config/
+cp -r assets ~/.config/ 
+cp -r configs/fish/config.fish ~/.config/fish/config.fish
 # ...
 
 log "Setup Complete"

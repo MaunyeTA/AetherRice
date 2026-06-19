@@ -56,20 +56,21 @@ PACKAGES=(
     dunst
     polkit-kde-agent
     xdg-desktop-portal-hyprland
-
     qt5-wayland
     qt6-wayland
-
     pipewire
     wireplumber
     pipewire-pulse
-
     sddm
-
     ttf-jetbrains-mono-nerd
-
+	brightnessctl
     git
     base-devel
+	grim
+	slurp
+    starship
+    fish
+    fastfetch
 )
 
 # ----------------------------
