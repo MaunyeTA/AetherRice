@@ -35,6 +35,7 @@ cp -r configs/waybar ~/.config/
 cp -r configs/rofi ~/.config/
 cp -r configs/kitty ~/.config/
 cp -r configs/fastfetch ~/.config/
+cp -r configs/quickshell ~/.config/
 cp -r assets ~/.config/ 
 cp -r configs/fish/config.fish ~/.config/fish/config.fish
 # ...

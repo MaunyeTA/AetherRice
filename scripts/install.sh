@@ -50,7 +50,7 @@ sudo pacman -Syu --noconfirm
 
 PACKAGES=(
     hyprland
-    waybar
+    quickshell
     rofi-wayland
     kitty
     dunst
